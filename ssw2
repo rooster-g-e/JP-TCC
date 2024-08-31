@@ -1,0 +1,250 @@
+1. Transformada de Fourier
+
+A Transformada de Fourier é uma técnica matemática fundamental utilizada para decompor uma função ou um sinal no domínio do tempo (ou espaço) em suas componentes de frequência. Ela converte uma função do tempo em uma função do domínio da frequência, fornecendo informações sobre as diferentes frequências presentes no sinal.
+
+Definição:
+
+Para uma função contínua 
+𝑓
+(
+𝑡
+)
+f(t), a Transformada de Fourier 
+𝐹
+(
+𝜔
+)
+F(ω) é definida pela seguinte integral:
+
+𝐹
+(
+𝜔
+)
+=
+∫
+−
+∞
+∞
+𝑓
+(
+𝑡
+)
+⋅
+𝑒
+−
+𝑗
+𝜔
+𝑡
+ 
+𝑑
+𝑡
+F(ω)=∫ 
+−∞
+∞
+​
+ f(t)⋅e 
+−jωt
+ dt
+Onde:
+
+𝜔
+ω é a frequência angular (em radianos por segundo).
+𝑗
+j é a unidade imaginária, 
+𝑗
+2
+=
+−
+1
+j 
+2
+ =−1.
+2. Espaço de Fourier
+
+O espaço de Fourier refere-se ao domínio no qual as funções ou sinais são representados em termos de suas frequências, ao invés de seus valores no tempo ou espaço.
+
+Espaço de Fourier Contínuo: Utilizado para sinais contínuos, onde a transformada resulta em uma função contínua de frequência.
+Espaço de Fourier Discreto: Utilizado para sinais discretos e amostrados, onde a Transformada Discreta de Fourier (DFT) é aplicada, frequentemente computada pela Transformada Rápida de Fourier (FFT), que é uma forma eficiente de calcular a DFT.
+3. Aplicações
+
+Processamento de Sinais: Utilizado em filtragem, compressão de sinais e análise de frequência.
+Análise de Imagens: Aplicado em transformações para melhorar a qualidade de imagens e aplicar filtros de frequência.
+Comunicações: Usado na modulação e demodulação de sinais, bem como na análise da largura de banda de sinais transmitidos.
+Soluções de Equações Diferenciais: Simplifica a resolução de equações diferenciais parciais (PDEs) e ordinárias (ODEs) transformando-as no domínio da frequência.
+4. Propriedades
+
+Algumas propriedades essenciais da Transformada de Fourier incluem:
+
+Linearidade: A transformada de Fourier de uma soma de funções é igual à soma das transformadas de Fourier dessas funções.
+
+𝐹
+{
+𝑎
+𝑓
+(
+𝑡
+)
++
+𝑏
+𝑔
+(
+𝑡
+)
+}
+=
+𝑎
+𝐹
+{
+𝑓
+(
+𝑡
+)
+}
++
+𝑏
+𝐹
+{
+𝑔
+(
+𝑡
+)
+}
+F{af(t)+bg(t)}=aF{f(t)}+bF{g(t)}
+Convolução: A transformada de Fourier da convolução de duas funções é igual ao produto das transformadas de Fourier dessas funções.
+
+𝐹
+{
+𝑓
+(
+𝑡
+)
+∗
+𝑔
+(
+𝑡
+)
+}
+=
+𝐹
+(
+𝜔
+)
+⋅
+𝐺
+(
+𝜔
+)
+F{f(t)∗g(t)}=F(ω)⋅G(ω)
+Teorema de Parseval: A energia total de um sinal no domínio do tempo é igual à energia total no domínio da frequência.
+
+∫
+−
+∞
+∞
+∣
+𝑓
+(
+𝑡
+)
+∣
+2
+𝑑
+𝑡
+=
+∫
+−
+∞
+∞
+∣
+𝐹
+(
+𝜔
+)
+∣
+2
+𝑑
+𝜔
+∫ 
+−∞
+∞
+​
+ ∣f(t)∣ 
+2
+ dt=∫ 
+−∞
+∞
+​
+ ∣F(ω)∣ 
+2
+ dω
+5. Exemplo Prático
+
+Considere um sinal 
+𝑓
+(
+𝑡
+)
+f(t) composto por uma soma de sinusoides, por exemplo:
+
+𝑓
+(
+𝑡
+)
+=
+𝐴
+1
+cos
+⁡
+(
+𝜔
+1
+𝑡
+)
++
+𝐴
+2
+cos
+⁡
+(
+𝜔
+2
+𝑡
+)
+f(t)=A 
+1
+​
+ cos(ω 
+1
+​
+ t)+A 
+2
+​
+ cos(ω 
+2
+​
+ t)
+Aplicando a Transformada de Fourier, você obterá picos em 
+𝜔
+1
+ω 
+1
+​
+  e 
+𝜔
+2
+ω 
+2
+​
+  no domínio da frequência, com as respectivas amplitudes 
+𝐴
+1
+A 
+1
+​
+  e 
+𝐴
+2
+A 
+2
+​
+ . Isso permite identificar as frequências dominantes no sinal e suas respectivas amplitudes, o que é fundamental para aplicações como análise de espectros, filtragem de ruído, e modulação de sinais em sistemas de comunicação.
